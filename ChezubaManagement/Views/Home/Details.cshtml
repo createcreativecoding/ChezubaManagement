@@ -1,0 +1,52 @@
+﻿@model ChezubaManagement.ViewModel.HomeDetailsViewModel
+
+
+
+
+
+<div class="container">
+    <h3> @Model.PageTitle </h3>
+    <div>
+        Project Title : @Model.Project.Heading
+    </div>
+
+    <div>
+        NGO : @Model.Project.NGO_name
+    </div>
+
+    <div>
+        Project Id : # @Model.Project.Id
+    </div>
+
+    <div>
+        Site of Work : @Model.Project.Site
+    </div>
+
+    <div>
+        Duration : @Model.Project.Duration (week)
+    </div>
+
+    <div>
+        Time Commitment : @Model.Project.Time_com (hours per week)
+    </div>
+
+    <div>
+        Address : @Model.Project.Address
+    </div>
+
+    <div>
+        Representative : @Model.Project.Name
+    </div>
+
+    <div>
+        Contact Number : @Model.Project.Phone
+    </div>
+
+    <a asp-controller="home" asp-action="edit" asp-route-id="@Model.Project.Id" class="btn btn-primary btn-lg p-1 mr-1 mt-5">Edit </a>
+    <a asp-controller="home" asp-action="list"  class="btn btn-primary btn-lg p-1 ml-1 mt-5">View List</a>
+
+</div>
+
+
+
+

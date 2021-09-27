@@ -1,0 +1,25 @@
+﻿@model IEnumerable<ChezubaManagement.Models.Project>
+
+@{
+    ViewBag.Title = "Lists";
+}
+
+<h3>Project List</h3>
+
+<div class="clearfix">
+    <a asp-controller="home" asp-action="create" class="btn btn-success btn-lg float-right">Create</a>
+</div>
+<ul>
+    @foreach (var projects in Model)
+    {
+        <li><a asp-controller="home" asp-action="details" asp-route-id="@projects.Id">@projects.Heading</a></li>
+
+    }
+</ul>
+<div>
+    <a asp-controller="home" asp-action="index" class="btn btn-primary btn-lg ">Back</a>
+
+</div>
+
+
+
